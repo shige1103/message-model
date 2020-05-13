@@ -51,10 +51,6 @@ def set_message
   @message = Message.find(params[:id])
 end
 
-def message_params
-  params.require(:message).permit(:content)
-end
-
 # Strong Parameter
 def message_params
   params.require(:message).permit(:content)
