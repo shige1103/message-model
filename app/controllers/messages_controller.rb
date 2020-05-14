@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
   end
   
   def show
+    @message = Message.find(params[:id])
   end
   
   def new
@@ -53,5 +54,5 @@ end
 
 # Strong Parameter
 def message_params
-  params.require(:message).permit(:content)
+  params.require(:message).permit(:content, :title)
 end
